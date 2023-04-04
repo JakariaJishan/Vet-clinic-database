@@ -1,14 +1,24 @@
 /* Populate database with sample data. */
 
 insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
-values ('Agumon','2020-02-03',0,true,10.23);
+values ('Charmander','08-02-2020',0,false,11);
 
 insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
-values ('Gabumon','2018-11-18',2,true,8);
+values ('Plantmon','15-11-2021',2,true,5.7);
 
 insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
-values ('Pikachu','2021-01-07',1,false,15.04);
+values ('Squirtle','02-04-1993',3,false,12.13);
 
 insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
-values ('Devimon','2017-05-12',5,true,11);
+values ('Angemon','12-06-2005',1,true,45);
+
+insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
+values ('Boarmon','07-11-2005',7,true,20.4);
+
+insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
+values ('Blossom','13-10-1998',3,true,17);
+
+insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
+values ('Ditto','14-05-2022',4,true,22);
+
 
