@@ -13,12 +13,12 @@ insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
 values ('Angemon','2005-06-12',1,true,-45);
 
 insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
-values ('Boarmon','2005-06-07',7,true,-20.4);
+values ('Boarmon','2005-06-07',7,true,20.4);
 
 insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
-values ('Blossom','1998-10-13',3,true,-17);
+values ('Blossom','1998-10-13',3,true,17);
 
 insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
-values ('Ditto','2022-05-14',4,true,-22);
+values ('Ditto','2022-05-14',4,true,22);
 
 
