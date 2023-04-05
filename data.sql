@@ -1,24 +1,24 @@
 /* Populate database with sample data. */
 
 insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
-values ('Charmander','08-02-2020',0,false,11);
+values ('Charmander','2020-02-08',0,false,11);
 
 insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
-values ('Plantmon','15-11-2021',2,true,5.7);
+values ('Plantmon','2021-11-15',2,true,5.7);
 
 insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
-values ('Squirtle','02-04-1993',3,false,12.13);
+values ('Squirtle','1993-04-02',3,false,12.13);
 
 insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
-values ('Angemon','12-06-2005',1,true,45);
+values ('Angemon','2005-06-12',1,true,45);
 
 insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
-values ('Boarmon','07-11-2005',7,true,20.4);
+values ('Boarmon','2005-11-07',7,true,20.4);
 
 insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
-values ('Blossom','13-10-1998',3,true,17);
+values ('Blossom','1998-10-13',3,true,17);
 
 insert into animals (name,date_of_birth,escape_attempts,neutered,weight_kg)
-values ('Ditto','14-05-2022',4,true,22);
+values ('Ditto','2022-05-14',4,true,22);
 
 

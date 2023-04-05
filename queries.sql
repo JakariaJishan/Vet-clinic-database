@@ -10,6 +10,14 @@ select * from animals where name != 'Gabumon'
 select * from animals where weight_kg between 10.4  and 17.3
 
 
+begin;
+update animals set species = 'unspecified';
+select * from animals;
+
+rollback;
+select * from animals;
+
+
 UPDATE animals 
 SET species = 'digimon'
 WHERE name like '%mon%' 
