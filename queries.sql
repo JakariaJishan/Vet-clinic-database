@@ -20,28 +20,36 @@ select * from animals;
 
 UPDATE animals 
 SET species = 'digimon'
-WHERE name like '%mon%' 
+WHERE name like '%mon%' ;
 
 UPDATE animals 
 SET species = 'pokemon'
-WHERE species is null
+WHERE species is null;
+
+commit;
 
 
 -- transactions
 begin;
-delete from animals
+delete from animals;
+select * from animals;
+rollback;
 
-rollback
+
 delete from animals 
-where date_of_birth > '01-01-2022'
-savepoint sp1
+where date_of_birth > '2022-01-01';
+
+savepoint sp1;
+
 update animals
-set weight_kg = weight_kg * (-1)
-rollback to sp1
+set weight_kg = weight_kg * (-1);
+
+rollback to sp1;
+
 update animals
-set weight_kg = weight_kg * (-1)
-begin;
-commit 
+set weight_kg = weight_kg * (-1);
+
+commit ;
 
 
 -- aggregations
@@ -50,5 +58,4 @@ select count (escape_attempts) from animals where escape_attempts = 0;
 select avg(weight_kg) from animals
 select neutered, sum(escape_attempts) from animals group by neutered
 select species, min(weight_kg), max(weight_kg) from animals group by species
-select species, avg(escape_attempts) from animals where date_of_birth between '1990-01-01' AND '2000-12-31' 
-group by species
+select species, avg(escape_attempts) from animals where date_of_birth between '1990-01-01' AND '2000-12-31' group by species;
