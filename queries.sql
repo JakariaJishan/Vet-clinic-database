@@ -22,9 +22,13 @@ UPDATE animals
 SET species = 'digimon'
 WHERE name like '%mon%' ;
 
+select * from animals;
+
 UPDATE animals 
 SET species = 'pokemon'
 WHERE species is null;
+
+select * from animals;
 
 commit;
 
@@ -34,7 +38,7 @@ begin;
 delete from animals;
 select * from animals;
 rollback;
-
+select * from animals;
 
 delete from animals 
 where date_of_birth > '2022-01-01';
