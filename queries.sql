@@ -89,4 +89,6 @@ select a.name, vi.date_of_visit as most_visited from animals a join visits vi on
 
 select a.name,v.name as vet_name, vi.date_of_visit from animals a join visits vi on a.id = vi.animals_id join vets v on v.id = vi.vets_id order by(vi.date_of_visit) desc limit 1;
 
+select count(*) from visits join animals on animals.id = visits.animals_id join species on species.id = animals.species_id join vets on vets.id = visits.vets_id left join specializations sp on sp.vets_id = vets.id where sp.species_id != animals.species_id or sp.species_id is null;
+
 select species.name, count(species.id) from species join animals on species.id = animals.species_id join visits on visits.animals_id = animals.id join vets on vets.id = visits.vets_id where vets.name = 'Maisy Smith' group by(species.id) order by(species.id) desc limit 1;
