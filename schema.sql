@@ -23,6 +23,6 @@ alter table animals add constraint fk_owners foreign key(owner_id) references ow
 -- many to many relationships
 create table vets (id int primary key generated always as identity, name varchar(50), age int, date_of_graduation date);
 
-create table specializations (id int primary key generated always as identity, species_id int, vets_id int, constraint fk_species foreign key(species_id) references species(id), constraint fk_vets foreign key(vets_id) references vets(id));
+create table specializations ( species_id int, vets_id int, primary key(species_id, vets_id), constraint fk_species foreign key(species_id) references species(id), constraint fk_vets foreign key(vets_id) references vets(id));
 
-create table visits (id int primary key generated always as identity, animals_id int, vets_id int, constraint fk_animals foreign key(animals_id) references animals(id), constraint fk_vets foreign key(vets_id) references vets(id));
+create table visits ( animals_id int, vets_id int, date_of_visit date,  constraint fk_animals foreign key(animals_id) references animals(id), constraint fk_vets foreign key(vets_id) references vets(id));
