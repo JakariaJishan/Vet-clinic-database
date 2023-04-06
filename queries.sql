@@ -80,3 +80,5 @@ select a.name, vi.date_of_visit from animals a join visits vi on a.id = vi.anima
 select count(distinct(a.name)) as total_seen from animals a join visits vi on a.id = vi.animals_id join vets ve on vi.vets_id = ve.id where ve.name = 'Stephanie Mendez';  
 
 select ve.name, s.name as specialties from vets ve left join specializations sp on ve.id = sp.vets_id left join species s on s.id = sp.species_id;
+
+ select a.name, vi.date_of_visit from animals a join visits vi on a.id = vi.animals_id join vets v on vi.vets_id = v.id where v.name = 'Stephanie Mendez' and vi.date_of_visit between '2020-04-01' and '2020-08-30';
