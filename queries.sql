@@ -76,3 +76,5 @@ select o.full_name, count(a.id) from animals a left join owners o on a.owner_id 
 
 -- many to many relations
 select a.name, vi.date_of_visit from animals a join visits vi on a.id = vi.animals_id join vets ve on ve.id = vi.vets_id where ve.name ='William Tatcher' order by(vi.date_of_visit) desc limit 1;
+
+select count(distinct(a.name)) as total_seen from animals a join visits vi on a.id = vi.animals_id join vets ve on vi.vets_id = ve.id where ve.name = 'Stephanie Mendez';  
