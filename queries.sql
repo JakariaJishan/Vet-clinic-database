@@ -73,3 +73,6 @@ select s.name,  count(a.id) from animals a join species s on a.species_id = s.id
 select a.name from  animals a join owners o on o.id = a.owner_id and o.full_name = 'Jennifer Orwell' join species s on o.id = a.species_id and s.name='Digimon';
 select a.* from animals a join owners o on o.id = a.owner_id and o.full_name = 'Dean Winchester' and a.escape_attempts = 0;
 select o.full_name, count(a.id) from animals a left join owners o on a.owner_id = o.id group by o.full_name order by count(a.id) desc limit 1;
+
+-- many to many relations
+select a.name, vi.date_of_visit from animals a join visits vi on a.id = vi.animals_id join vets ve on ve.id = vi.vets_id where ve.name ='William Tatcher' order by(vi.date_of_visit) desc limit 1;
