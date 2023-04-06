@@ -84,3 +84,5 @@ select ve.name, s.name as specialties from vets ve left join specializations sp 
 select a.name, vi.date_of_visit from animals a join visits vi on a.id = vi.animals_id join vets v on vi.vets_id = v.id where v.name = 'Stephanie Mendez' and vi.date_of_visit between '2020-04-01' and '2020-08-30';
 
 select a.name as most_visited, count(vi.animals_id) from animals a join visits vi on a.id = vi.animals_id join vets v on v.id = vi.vets_id group by(vi.animals_id, a.name) order by count(vi.animals_id) desc limit 1;
+
+select a.name, vi.date_of_visit as most_visited from animals a join visits vi on a.id = vi.animals_id join vets v on v.id = vi.vets_id where v.name = 'Maisy Smith' order by(vi.date_of_visit) limit 1;
