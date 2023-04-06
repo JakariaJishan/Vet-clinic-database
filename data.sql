@@ -63,3 +63,8 @@ insert into vets(name, age, date_of_graduation) values ('William Tatcher', 45, '
 insert into vets(name, age, date_of_graduation) values ('Maisy Smith', 26, '2019-01-17');
 insert into vets(name, age, date_of_graduation) values ('Stephanie Mendez', 64, '1981-05-04');
 insert into vets(name, age, date_of_graduation) values ('Jack Harkness', 38, '2008-06-08');
+
+insert into specializations(species_id, vets_id) values(1,1);
+insert into specializations(species_id, vets_id) values(1,3);
+insert into specializations(species_id, vets_id) values(2,3);
+insert into specializations(species_id, vets_id) values(2,4);
