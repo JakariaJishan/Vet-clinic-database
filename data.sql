@@ -56,3 +56,10 @@ update animals set owner_id = 2 where name in('Gabumon', 'Pikachu');
 update animals set owner_id = 3 where name in('Devimon', 'Plantmon');
 update animals set owner_id = 4 where name in('Charmander', 'Squirtle', 'Blossom');
 update animals set owner_id = 5 where name in('Angemon', 'Boarmon');
+
+
+-- many to many relations
+insert into vets(name, age, date_of_graduation) values ('William Tatcher', 45, '2000-04-23');
+insert into vets(name, age, date_of_graduation) values ('Maisy Smith', 26, '2019-01-17');
+insert into vets(name, age, date_of_graduation) values ('Stephanie Mendez', 64, '1981-05-04');
+insert into vets(name, age, date_of_graduation) values ('Jack Harkness', 38, '2008-06-08');
